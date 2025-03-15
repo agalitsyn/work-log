@@ -1,0 +1,38 @@
+[project]
+name = "work-log"
+version = "0.1.0"
+description = "A command-line time tracking tool for managing work across multiple projects"
+authors = [{ name = "Alexey Galitsyn", email = "alexander.galitsyn@gmail.com" }]
+requires-python = ">=3.8"
+readme = "README.md"
+license = { text = "MIT" }
+dependencies = [
+    "typer>=0.9.0,<1.0.0",
+    "rich>=13.5.0,<14.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.3.1",
+    "ruff",
+]
+
+[project.scripts]
+work-log = "main:main"
+
+[build-system]
+requires = ["setuptools>=42"]
+build-backend = "setuptools.build_meta"
+
+[tool.uv]
+package = false
+
+[tool.ruff]
+line-length = 88
+target-version = "py38"
+select = ["E", "F", "I", "B", "W"]
+ignore = []
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
