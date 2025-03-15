@@ -10,7 +10,9 @@ A command-line time tracking tool for managing work across multiple projects.
 - Support for hourly billing rates
 - Beautiful CLI interface with colorful output
 
-## Installation
+## Requirements
+
+- uv (`brew install uv` for Mac OS)
 
 ### Quick Setup
 
@@ -20,9 +22,7 @@ Install dependencies:
 uv sync
 ```
 
-### Wrapper Script Setup (Recommended)
-
-A wrapper script `wl` is included for convenience. To use it:
+### Setup alias (Recommended)
 
 Create an alias:
 
