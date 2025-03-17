@@ -27,7 +27,7 @@ uv sync
 Create an alias:
 
 ```bash
-echo "alias wl=\"uv run $(pwd)/main.py \$@\"" >> ~/.zshrc
+echo "alias wl=\"uv run --directory $(pwd) main.py \$@\"" >> ~/.zshrc
 ```
 
 Now you can use the `wl` command from anywhere!
